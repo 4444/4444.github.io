@@ -10,7 +10,7 @@ const HEART_SCALE_DECREMENT = 0.01;
 const HEART_MAX_SIZE = 3;
 const BOX_WIDTH = 50;
 const BOX_HEIGHT = 50;
-let GODMODE = true;
+let GODMODE = false;
 
 // Global variables
 let platforms;
