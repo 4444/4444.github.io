@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sy & Ry</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.80.1/phaser.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0; /* Ensure no padding around the body */
+            background-color: #FFB6C1; /* Light pink background color */
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0 0 20px;
+            color: #FF69B4; /* Hot pink text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #game-container {
+            width: 800px; /* Adjust to match your game's width */
+            height: 600px; /* Adjust to match your game's height */
+            border: 2px solid #FF69B4; /* Hot pink border around the game */
+            background: #fff; /* White background inside the border */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow for better visibility */
+            position: relative; /* Ensure the canvas stays inside the container */
+        }
+
+        canvas {
+            display: block; /* Remove any default margins */
+            width: 100%; /* Ensure canvas fills the container */
+            height: 100%; /* Ensure canvas fills the container */
+        }
+    </style>
+</head>
+<body>
+    <h1>Sy & Ry</h1>
+    <div id="game-container">
+        <script src="src/game.js"></script>
+    </div>
+</body>
+</html>
