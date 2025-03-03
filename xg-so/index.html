@@ -38,7 +38,7 @@
         .timeline-container {
             width: 100%;
             position: relative;
-            padding-top: 50px;
+            padding-top: 35px;
             background: #fff;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
@@ -49,8 +49,7 @@
             width: 100%;
             height: 5px;
             background-color: #e44d26;
-            position: absolute;
-            top: 40px;
+            position: relative;
             left: 0;
             transition: width 0.3s ease;
         }
@@ -80,7 +79,7 @@
 
         .milestone.active {
             opacity: 1;
-            transform: scale(1.2);
+            transform: scale(1.8);
         }
 
         .milestone .date {
@@ -198,46 +197,201 @@
             bottom: 0;
             z-index: -1;
         }
+        .fake-page {
+    font-family: 'Roboto', sans-serif;
+    background: #f1f1f1;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.country-flags {
+    margin-top: 30px;
+}
+
+.flags {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.flag-icon {
+    width: 50px;
+    height: auto;
+    border: 1px solid black;
+    transition: transform 0.3s ease;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+}
+
+.btn-enter {
+    background-color: #00796b;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enter:hover {
+    background-color: #004d40;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.promotion {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.promotion h2 {
+    color: #e44d26;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.promotion h3 {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-size: 1.5rem;
+}
+
+.discounted-price {
+    color: #e44d26;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.promotion .btn-enter {
+    background-color: #e44d26;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.promotion .btn-enter:hover {
+    background-color: #c0392b;
+}
+
+.floating {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 
     </style>
 </head>
 <body>
 
+    <div id="fakePage" class="fake-page">
+    
+
+        <img style="width:512px;" src="https://images.stockcake.com/public/9/6/e/96e2b221-0e28-4fa9-8c9f-7db670c9dfd3/medical-knowledge-sharing-stockcake.jpg" alt="Our Sequence" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuan0W-P-U81l0HtWJWo-PF4sNs5chzOkfMA&s" alt="Our Sequence" />
+        
+        <h1>Our Sequence: DNA Testing</h1>
+        <p>Welcome to <b>Our Sequence</b>! Think you know your genetic sequence? Our method goes deeper than what other DNA testing services offer. See how your sequence stacks up!</p>
+        
+        <div class="promotion">
+            <h2>Special Offer: Limited-Time Discount!</h2>
+            <p>Get your <strong>Our Sequence DNA Testing Kit</strong> today and unlock your genetic timeline!</p>
+            <h3><span class="original-price"> ~€199~ </span><span class="discounted-price">Now €79!</span></h3>
+            <p>That's right, **only €79** for the most advanced DNA testing kit on the market. It's a better price than elsewhere, and the results are priceless.</p>
+            <p><strong>Shipping available worldwide, at no extra cost!</strong></p>
+            <button id="enterBtn2" class="btn-enter">Claim Your Kit 🛒</button>
+        </div>
+       
+        <div class="country-flags">
+            <p>Available in several countries:</p>
+            <div class="flags">
+                <img src="https://www.countryflags.com/wp-content/uploads/china-flag-png-large.png" alt="China" title="China" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/japan-flag-png-large.png" alt="Japan" title="Japan" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/indonesia-flag-png-large.png" alt="Indonesia" title="Indonesia" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/united-states-of-america-flag-png-large.png" alt="USA" title="USA" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/germany-flag-png-large.png" alt="Germany" title="Germany" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/netherlands-flag-png-large.png" alt="Netherlands" title="Netherlands" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/united-kingdom-flag-png-large.png" alt="UK" title="UK" class="flag-icon">
+                <img src="https://www.countryflags.com/wp-content/uploads/flag-jpg-xl-9-2048x1024.jpg" alt="Australia" title="Australia" class="flag-icon">
+            </div>
+        </div>
+    
+        <!-- Subtle hint about the timeline -->
+        <div class="subtle-hint">
+            <br/>
+            <p>Curious how your timeline compares? Explore key moments and connections.</p>
+        </div>
+        
+        <button id="enterBtn" class="btn-enter">Enter the Website</button>
+        
+        <!-- Optional footer to make it official -->
+        <footer>
+            <p>© 2025 Our Sequence. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Service</p>
+        </footer>
+    </div>
+    
+
+<div id="trueContent" style="display: none;">
     <div id="confetti-container"></div> <!-- Confetti container -->
 
     <div class="container">
-        <!-- Timeline Container (Sidebar) -->
-        <div class="timeline-container">
-            <div class="timeline-bar" id="timelineBar"></div> <!-- Red Progress Bar -->
-            <div class="timeline">
-                <!-- Milestones -->
-                <div class="milestone" id="milestone1">
-                    ❤️
-                    <span class="date">Start</span>
-                </div>
-                <div class="milestone" id="milestone2">
-                    ❤️
-                    <span class="date">Jan 2024</span>
-                </div>
-                <div class="milestone" id="milestone5">
-                    ❤️
-                    <span class="date">Jun 2024</span>
-                </div>
-                <div class="milestone" id="milestone6">
-                    ❤️
-                    <span class="date">Jan 2025</span>
-                </div>
-                <div class="milestone" id="milestone7">
-                    ❤️
-                    <span class="date">Mar 4, 2025</span>
-                </div>
-            </div>
-        </div>
-
 <!-- Content Container -->
 <div class="content-container" id="content1">
     <h1>Selamat Ulang Tahun, Sayang Mungil! 💖</h1>
     <p>Hari ini, kita merayakan lebih dari sekadar hari ulang tahunmu. Kita merayakan perjalanan kita, setiap langkah yang kita ambil bersama, dan semua kenangan indah yang telah kita ciptakan. Aku sangat bersyukur bisa berada di sini bersamamu, dan setiap momen yang kita bagi bersama adalah hadiah yang tak ternilai.</p>
+
+
+    <p><b>Klik pada hati setiap bulan di bawah untuk menavigasi timeline 'Our Sequence'!</b></p>
 </div>
 
 <div class="content-container" id="content2">
@@ -258,13 +412,76 @@
 <div class="content-container" id="content7">
     <h1>Hari Ini - 4 Maret 2025 🎂</h1>
     <p>Selamat ulang tahun, Sayang Mungil Syafira. 💖 Hari ini, kita merayakan lebih dari sekadar ulang tahunmu. Kita merayakan kebersamaan kita, perjalanan yang telah kita lalui, dan semua impian yang kita buat bersama. Aku merasa sangat diberkati bisa berada di sini denganmu, dan aku tahu masih banyak hal luar biasa yang akan kita hadapi. Kita telah melalui banyak hal, dan yang terbaik masih akan datang. Aku sayang kamu lebih dari yang bisa diungkapkan kata-kata.</p>
-</div>
 
+    <img class="floating" src="https://4444.github.io/sy-ry/assets/sya1.png" style="height:72px; image-rendering: pixelated;" />
+    <img class="floating" src="https://4444.github.io/sy-ry/assets/bingo1.png" style="height:37px; image-rendering: pixelated;" />
+    <img class="floating" src="https://4444.github.io/sy-ry/assets/ry1.png" style="height:72px; image-rendering: pixelated;" />
+    <img class="" src="https://4444.github.io/sy-ry/assets/cibuy1.png" style="height:42px; image-rendering: pixelated;" />
+
+</div>
+<div class="timeline-bar" id="timelineBar"></div>
+
+
+        <!-- Timeline Container (Sidebar) -->
+        <div class="timeline-container">
+            <div class="timeline">
+                <!-- Milestones -->
+                <div class="milestone" id="milestone1">
+                    ❤️
+                    <span class="date">Start</span>
+                </div>
+                <div class="milestone" id="milestone2">
+                    <img src="https://4444.github.io/sy-ry/assets/ry1.png" style="transform:scaleX(-1);width:72px; image-rendering: pixelated;" />
+                    ❤️
+                    <img src="https://4444.github.io/sy-ry/assets/sya1.png" style=" transform:scaleX(-1); width:58px; image-rendering: pixelated;" />
+                    <span class="date">Jan 2024</span>
+                </div>
+                <div class="milestone" id="milestone5">
+                    <img src="https://4444.github.io/sy-ry/assets/bingo1.png" style="width:72px; image-rendering: pixelated;" />
+                    ❤️
+                    <span class="date">Jun 2024</span>
+                </div>
+                <div class="milestone" id="milestone6">
+                    ❤️
+                    <img src="https://4444.github.io/sy-ry/assets/cibuy1.png" style="transform: scaleX(-1); width:72px; image-rendering: pixelated;" />
+                    <span class="date">Jan 2025</span>
+                </div>
+                <div class="milestone" id="milestone7">
+                    <img src="https://4444.github.io/sy-ry/assets/sya2.png" style="width:72px; image-rendering: pixelated;" />
+                    ❤️
+                    <span class="date">Mar 4, 2025</span>
+                </div>
+            </div>
+        </div>
+
+<audio id="audioPlayer">
+    <source src="https://github.com/4444/4444.github.io/raw/refs/heads/main/sy-ry/assets/cantik.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="sndFxPlayer">
+    <source src="https://github.com/4444/4444.github.io/raw/refs/heads/main/sy-ry/assets/confetti.mp3" preload="auto" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="sndFxPlayer2">
+    <source src="https://github.com/4444/4444.github.io/raw/refs/heads/main/sy-ry/assets/bounce.mp3" preload="auto" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
     </div>
+</div>
 
     <script>
         $(document).ready(function () {
+
+            document.querySelectorAll('.floating').forEach(img => {
+                // Set a random initial Y position between -10px and 10px
+                const randomStart = (Math.random() - 0.5) * 20; // Random value between -10px and 10px
+                img.style.transform = `translateY(${randomStart}px)`; // Apply the random transform
+            });
+
+
             let currentIndex = 0;
             const milestones = $(".milestone");
             const contentContainers = $(".content-container");
@@ -276,25 +493,48 @@
                 $(milestones[currentIndex]).addClass('active');
                 $(contentContainers[currentIndex]).addClass('active');
 
+                // Update the progress bar width
                 const progress = (currentIndex / (milestones.length - 1)) * 100;
                 timelineBar.css("width", progress + "%");
+                
 
                 if (currentIndex === 4) {
+                    // Trigger confetti on birthday milestone
                     confetti({
-                        particleCount: 300,
-                        spread: 180,
-                        origin: { y: 0.6 }
+                        particleCount: 500,
+                        spread: 360,
+                        origin: { y: 0.2 }
                     });
+                    var sound = $('#sndFxPlayer')[0];  // Get the audio element
+    sound.currentTime = 0;  // Reset sound to the beginning
+    sound.play();  // Play the sound
+                }
+                else {
+                    var sound = $('#sndFxPlayer2')[0];  // Get the audio element
+    sound.currentTime = 0;  // Reset sound to the beginning
+    sound.volume = 0.4;
+    sound.play();  // Play the sound
                 }
             }
 
+            // Initially show the first milestone
             updateTimeline();
 
+            // Milestone click (alternative navigation)
             $(".milestone").click(function () {
                 const index = $(this).index();
                 currentIndex = index;
                 updateTimeline();
             });
+
+            $("#enterBtn, #enterBtn2").click(function() {
+        // Hide the fake page
+        $("#fakePage").fadeOut();
+        
+        // Show the real content
+        $("#trueContent").fadeIn();
+        $('#audioPlayer')[0].play();
+    });
         });
 
     </script>
